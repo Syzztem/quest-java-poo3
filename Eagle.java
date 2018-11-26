@@ -1,3 +1,19 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*																				*/
+/*	Eagle.java																	*/
+/*																				*/
+/*	made with <3 by Louis Thievent			  ▄▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▄			*/
+/*										      █  ▄▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▄  █			*/
+/*	louis.thievent@gmail.com			      █ █      ▄    ▄       █ █			*/
+/*										      █ █   ▄        ▄▀▀▄   █ █▄▀▀▄		*/
+/*	Created: 26-11-18 at 15:38:29		▄▀▀▄  █ █        ▄   █   ▀▄▄█▄▀   █		*/
+/*										▀▄  ▀▀█ █     ▄      █            █		*/
+/*										  ▀▀▄▄█ █  ▄        █   ▄█   ▄ ▄█  █	*/
+/*										      █ █        ▄  █ ██ ▄  ▄  ▄ ███	*/
+/*	Please don't feed the nyan cat		     ▄█  ▀▄▄▄▄▄▄▄▄▄▄▄▀▄  ▀▀▀▀▀▀▀ ▄▀		*/
+/*										   ▄▀ ▄▀▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▀▀▀▀▀▀▀▀▀▀		*/
+/*										   █▄▄▀  █▄▄▀        █▄▄▀ ▀▄▄█			*/
+/*~~~~~~~~~~~~<3~M~A~Y~~~T~H~E~~~N~Y~A~N~~~B~E~~~W~I~T~H~~~Y~O~U~<3~~~~~~~~~~~~~*/
 public class Eagle extends Bird implements Fly{
 
     private boolean flying;
@@ -48,8 +64,12 @@ public class Eagle extends Bird implements Fly{
 	@Override
 	public void land()
 	{
+		if (this.altitude > 100)
+			System.out.println(this.getName() + is too high, he can't land!);
+		else {
 		this.altitude = 0;
 		System.out.println(this.getName() + " lands graciously");
+		}
 	}
 
 	public void glide()
